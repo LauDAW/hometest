@@ -17,6 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
+        'user_id',
         'name',
         'email',
         'password',
@@ -43,5 +44,13 @@ class User extends Authenticatable
 
     public function role() {
         return $this->belongsTo('App\Models\Role');
+    }
+
+    public function recipes() {
+        return $this->hasMany('App\Models\Recipe');
+    }
+
+    public function comments() {
+        return $this->hasMany('App\Models\Comment');
     }
 }

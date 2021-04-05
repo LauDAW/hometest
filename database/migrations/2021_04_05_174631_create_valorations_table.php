@@ -16,7 +16,7 @@ class CreateValorationsTable extends Migration
         Schema::create('valorations', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('recipee_id');
+            $table->unsignedBigInteger('recipe_id');
             $table->integer('valoration');
             $table->timestamps();
         });
