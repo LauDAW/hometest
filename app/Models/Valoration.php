@@ -11,4 +11,12 @@ class Valoration extends Model
         'recipe_id',
         'valoration'
     ];
+
+    public function recipe() {
+        return $this->belongsTo('App\Models\Recipe');
+    }
+    
+    public function user() {
+        return $this->belongsTo('App\Models\User');
+    }
 }

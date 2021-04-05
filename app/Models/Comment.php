@@ -16,4 +16,12 @@ class Comment extends Model
     public function poster() {
         return $this->belongsTo('App\Models\User');
     }
+
+    public function reply() {
+        return $this->belongsTo('App\Models\Comment');
+    }
+
+    public function replies() {
+        return $this->hasMany('App\Models\Comment');
+    }
 }
