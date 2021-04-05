@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/holita', function () {
-    $users = User::find(1);
+    $users = User::with('role')->find(1);
 
     return $users;
 });
