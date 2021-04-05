@@ -19,7 +19,6 @@ Route::get('/', function () {
 });
 
 Route::get('/holita', function () {
-    $users = User::with('comentarios')->get();
     $users = User::find(1);
 
     return $users;
